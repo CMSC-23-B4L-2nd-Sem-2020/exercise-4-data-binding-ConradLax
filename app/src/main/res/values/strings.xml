@@ -2,12 +2,12 @@
     <string name="app_name">Laxamana_exer4_SlamBook</string>
     <string name="name_text">   Enter name</string>
     <string name="nickname_text">   Enter nickname</string>
-    <string name="age_text">    Enter age</string>
-    <string name="bday_text">   Month-Day-Year</string>
-    <string name="phone_text">  09XX-XXX-XXXX</string>
-    <string name="email_text">  Enter email address</string>
-    <string name="course_text"> Enter course</string>
-    <string name="dream_text">  Enter dream</string>
-    <string name="crush_text">  Enter name of crush</string>
-    <string name="msg_text">    Enter message</string>
+    <string name="age_text">Enter age</string>
+    <string name="bday_text">Month-Day-Year</string>
+    <string name="phone_text">09XX-XXX-XXXX</string>
+    <string name="email_text">Enter email address</string>
+    <string name="course_text">Enter course</string>
+    <string name="dream_text">Enter dream</string>
+    <string name="crush_text">Enter name of crush</string>
+    <string name="msg_text">Enter message</string>
 </resources>

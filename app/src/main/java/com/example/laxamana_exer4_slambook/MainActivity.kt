@@ -1,14 +1,17 @@
 package com.example.laxamana_exer4_slambook
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import androidx.databinding.DataBindingUtil
 import com.example.laxamana_exer4_slambook.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-
+    //makes a binding of components in activity_main
     private lateinit var binding: ActivityMainBinding
+    //instantiates a class StringData
     private val myName = StringData("Welcome!","Name","Nickname","Age","When is your birthday?","Phone number"
     ,"Email address","Course","What's your ultimate dream?","Who is your secret crush?","What is your message for me?",
         "Enter name","Enter nickname","Enter age","Month-Day-Year","09XX-XXX-XXXX","Enter email address"
@@ -17,15 +20,16 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-
+        //binding holds all components inside the <layout> tag
         binding.submitButton.setOnClickListener{
             displayData()
         }
-
+        //assigns the newly-initialized myName class instance of StringData then give the value to the initiated variable named stringData found in activity_main
         binding.stringData = myName
     }
 
     private fun displayData() {
+        //shortcut for binding each variables in Kotlin
         binding.apply{
             stringData?.nameVal = nameEdit.text.toString()
             stringData?.nicknameVal = nicknameEdit.text.toString()
@@ -37,7 +41,9 @@ class MainActivity : AppCompatActivity() {
             stringData?.dreamVal = dreamEdit.text.toString()
             stringData?.crushVal = crushEdit.text.toString()
             stringData?.msgVal = msgEdit.text.toString()
-            invalidateAll()
+            invalidateAll()         //updates the UI / refreshes the value of the variables above in binding object
+
+            //all initial textViews will disappear when submit_button is pressed
             greetingsText.visibility = View.GONE
             nameText.visibility = View.GONE
             nameEdit.visibility = View.GONE
@@ -60,7 +66,7 @@ class MainActivity : AppCompatActivity() {
             msgText.visibility = View.GONE
             msgEdit.visibility = View.GONE
             submitButton.visibility = View.GONE
-
+            //makes the output texts from user's input visible when submit_button is pressed
             outputName.visibility = View.VISIBLE
             outputNickname.visibility = View.VISIBLE
             outputAge.visibility = View.VISIBLE
@@ -73,7 +79,9 @@ class MainActivity : AppCompatActivity() {
             outputMsg.visibility = View.VISIBLE
             responseText.visibility = View.VISIBLE
         }
-
+// Hide the keyboard.
+        val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputMethodManager.hideSoftInputFromWindow(binding.submitButton.windowToken, 0)
 
     }
 }
