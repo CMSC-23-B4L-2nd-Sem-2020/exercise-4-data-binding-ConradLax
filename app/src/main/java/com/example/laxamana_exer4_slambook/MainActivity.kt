@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
     //makes a binding of components in activity_main
     private lateinit var binding: ActivityMainBinding
     //instantiates a class StringData
-    private val myName = StringData("Welcome!","Name","Nickname","Age","When is your birthday?","Phone number"
+    private val myName = StringData("Welcome!","Full Name","Nickname","Age","When is your birthday?","Phone number"
     ,"Email address","Course","What's your ultimate dream?","Who is your secret crush?","What is your message for me?",
         "Enter name","Enter nickname","Enter age","Month-Day-Year","09XX-XXX-XXXX","Enter email address"
     ,"Enter course","Enter dream","Enter name of crush","Enter message","DONE","\n\nThank you for answering!")
