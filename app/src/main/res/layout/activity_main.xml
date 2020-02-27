@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="stringData"
+            type="com.example.laxamana_exer4_slambook.StringData" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:context=".MainActivity">
+
+
+            <TextView
+                android:id="@+id/outputName"
+                style="@style/textView_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={stringData.nameVal}"
+                tools:visibility="gone" />
+
+            <TextView
+                android:id="@+id/greetings_text"
+                style="@style/textView_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={stringData.greeting}"
+                android:textAlignment="center" />
+
+
+            <TextView
+                android:id="@+id/name_text"
+                style="@style/Widget.AppCompat.TextView.SpinnerItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={stringData.name}" />
+
+            <EditText
+                android:id="@+id/name_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="aaaaaaa"
+                android:inputType="textPersonName" />
+
+            <Button
+                android:id="@+id/submit_button"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@={stringData.buttonText}" />
+
+        </LinearLayout>
+    </ScrollView>
+</layout>
