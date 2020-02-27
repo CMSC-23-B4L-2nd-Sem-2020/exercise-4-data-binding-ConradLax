@@ -27,7 +27,99 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@={stringData.nameVal}"
-                tools:visibility="gone" />
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/outputNickname"
+                style="@style/textView_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={stringData.nicknameVal}"
+                android:textAlignment="center"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/outputAge"
+                style="@style/textView_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={stringData.ageVal}"
+                android:textAlignment="center"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/outputBday"
+                style="@style/textView_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={stringData.bdayVal}"
+                android:textAlignment="center"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/outputPhone"
+                style="@style/textView_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={stringData.phoneVal}"
+                android:textAlignment="center"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/outputEmail"
+                style="@style/textView_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={stringData.emailVal}"
+                android:textAlignment="center"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/outputCourse"
+                style="@style/textView_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={stringData.courseVal}"
+                android:textAlignment="center"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/outputDream"
+                style="@style/textView_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={stringData.dreamVal}"
+                android:textAlignment="center"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/outputCrush"
+                style="@style/textView_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={stringData.crushVal}"
+                android:textAlignment="center"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/outputMsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={stringData.msgVal}"
+                android:visibility="gone"
+                style="@style/textView_style"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/response_text"
+                style="@style/textView_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={stringData.responseText}"
+                android:textAlignment="center"
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/greetings_text"
@@ -35,7 +127,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@={stringData.greeting}"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textSize="24sp" />
 
 
             <TextView
@@ -47,11 +140,147 @@
 
             <EditText
                 android:id="@+id/name_edit"
+                style="@style/textView_style"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="aaaaaaa"
+                android:hint="@string/name_text"
                 android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/nickname_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={stringData.nickname}" />
+
+            <EditText
+                android:id="@+id/nickname_edit"
+                style="@style/textView_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/nickname_text"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/age_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={stringData.age}" />
+
+            <EditText
+                android:id="@+id/age_edit"
+                style="@style/textView_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="@string/age_text"/>
+
+            <TextView
+                android:id="@+id/bday_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={stringData.bday}" />
+
+            <EditText
+                android:id="@+id/bday_edit"
+                style="@style/textView_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/bday_text"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/phone_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={stringData.phone}" />
+
+            <EditText
+                android:id="@+id/phone_edit"
+                style="@style/textView_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/phone_text"
+                android:inputType="phone" />
+
+            <TextView
+                android:id="@+id/email_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={stringData.email}" />
+
+            <EditText
+                android:id="@+id/email_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/email_text"
+                android:inputType="textEmailAddress"
+                style="@style/textView_style" />
+
+            <TextView
+                android:id="@+id/course_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={stringData.course}" />
+
+            <EditText
+                android:id="@+id/course_edit"
+                style="@style/textView_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/course_text"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/dream_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={stringData.dream}" />
+
+            <EditText
+                android:id="@+id/dream_edit"
+                style="@style/textView_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/dream_text"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/crush_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={stringData.crush}" />
+
+            <EditText
+                android:id="@+id/crush_edit"
+                style="@style/textView_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/crush_text"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/msg_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={stringData.msg}" />
+
+            <EditText
+                android:id="@+id/msg_edit"
+                style="@style/textView_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/msg_text"
+                android:inputType="textMultiLine|textPersonName" />
 
             <Button
                 android:id="@+id/submit_button"
