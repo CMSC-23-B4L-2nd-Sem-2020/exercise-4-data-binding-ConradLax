@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!--instantiates a variable that will hold the instance from MainActivity.kt which has instantiated attributes to be used as resource of textViews for their attributes with texts/data -->
     <data>
 
         <variable
